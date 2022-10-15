@@ -52,7 +52,7 @@ const ShopeeMall = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className="branch w-[74.3%]">
+                <div className="branch w-[68%]">
                     <Swiper
                         navigation={true}
                         modules={[Navigation]}

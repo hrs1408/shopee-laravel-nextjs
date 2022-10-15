@@ -11,8 +11,8 @@ const TopProduct = () => {
                 <div className="bg-[rgba(0,0,0,.26)] w-[92.5%] text-center p-1 absolute bottom-10">
                     <p className="text-white text-sm">Bán 2k+ / tháng</p>
                 </div>
-                <div className="text-md pt-2 ">
-                    <p className='text-stone-700 line-clamp-2'>Áo Thun Local Brand</p>
+                <div className="text-md pt-2">
+                    <p className='text-stone-700 truncate'>Áo Thun Local Brand</p>
                 </div>
                 <div className="absolute top-0 left-15">
                     <Image
