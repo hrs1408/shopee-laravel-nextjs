@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-pagination-bullet{
+    border: 1px solid #ccc;
+}
+.swiper-pagination-bullet-active {
+    border-color: #E03A29;
+    background-color: #E03A29 !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50%;
+    box-shadow: 0 1px 12px 0 rgb(0 0 0 / 12%);
+    transition: transform .2s;
+    display: flex;
+    &::after{
+        font-size: 12px !important;
+        color: black;
+    }
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+
+.swiper-button-disabled{
+    display: none !important;
+}
