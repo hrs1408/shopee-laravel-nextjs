@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['cf.shopee.vn'],
+    domains: ['cf.shopee.vn', 'deo.shopeemobile.com'],
   },
 }
 
