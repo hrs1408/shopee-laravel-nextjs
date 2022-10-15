@@ -54,26 +54,35 @@ const ShopeeMall = () => {
                 </div>
                 <div className="branch w-[68%]">
                     <Swiper
+                        slidesPerView={4}
                         navigation={true}
                         modules={[Navigation]}
                         className="mySwiper">
-                        <SwiperSlide className={"grid grid-cols-4"}>
-                            <Branch/>
-                            <Branch/>
-                            <Branch/>
-                            <Branch/>
-                            <Branch/>
-                            <Branch/>
+                        <SwiperSlide className={""}>
                             <Branch/>
                             <Branch/>
                         </SwiperSlide>
-                        <SwiperSlide className={"grid grid-cols-4"}>
+                        <SwiperSlide className={""}>
                             <Branch/>
                             <Branch/>
+                        </SwiperSlide>
+                        <SwiperSlide className={""}>
                             <Branch/>
                             <Branch/>
+                        </SwiperSlide>
+                        <SwiperSlide className={""}>
                             <Branch/>
                             <Branch/>
+                        </SwiperSlide>
+                        <SwiperSlide className={""}>
+                            <Branch/>
+                            <Branch/>
+                        </SwiperSlide>
+                        <SwiperSlide className={""}>
+                            <Branch/>
+                            <Branch/>
+                        </SwiperSlide>
+                        <SwiperSlide className={""}>
                             <Branch/>
                             <Branch/>
                         </SwiperSlide>

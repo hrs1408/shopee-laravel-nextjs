@@ -4,10 +4,22 @@ import BestSeller from "../components/BestSeller";
 import ProductItem from "../components/ProductItem";
 import MoreButton from "../components/MoreButton";
 import Footer from "../components/Footer";
+import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+            const fetchData = async () => {
+                const data = await fetch(`https://dummyjson.com/products`);
+                const json = await data.json();
+                setProducts(json.products);
+            }
+            fetchData();
+        }, []
+    )
     return (
-        <div className={"w-full bg-[#f5f5f5] "}>
+        <div className={"w-full bg-[#f5f5f5]"}>
             <div className="container m-auto bg-white">
                 <ShopeeMall/>
             </div>
@@ -21,24 +33,11 @@ const Home: NextPage = () => {
                     </div>
                 </div>
                 <div className={"grid grid-cols-6 gap-2"}>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
-                    <ProductItem/>
+                    {
+                        products.map((item) => {
+                            return ProductItem(item)
+                        })
+                    }
                 </div>
                 <div className={"mt-10 flex justify-center"}>
                     <MoreButton/>
